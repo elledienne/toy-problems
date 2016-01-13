@@ -1,17 +1,15 @@
-var expect = require('chai').expect;
-
-describe("A test suite", function() {
+describe("Test for: isUnique", function() {
    
-  beforeEach(function() {
+  // beforeEach(function() {
+  // });
 
-  });
+  // afterEach(function() {
+  // });
 
-  afterEach(function() {
+  it('Should return true. "abcdefghilmnopqrstuvz" is unique' , function() {
+    var result = isUnique('abcdefghilmnopqrstuvz');
 
-  });
-
-  it('should fail', function() {
-    expect(true).to.be.true;
+    expect(result).to.be.true;
   });
   
 });
