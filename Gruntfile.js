@@ -52,7 +52,7 @@ module.exports = function(grunt) {
         tasks: [
           'jshint',
           'jscs',
-          'mochaTest'
+          'karma'
         ]
       }
     },
