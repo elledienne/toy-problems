@@ -6,9 +6,16 @@ module.exports = function(grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'spec'
+          reporter: 'spec',
+          require: ['src/**/*.js']
         },
         src: ['test/**/*.js']
+      }
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
       }
     },
 
@@ -60,13 +67,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks("grunt-jscs");
+  grunt.loadNpmTasks('grunt-karma');
 
   ////////////////////////////////////////////////////
   // Main grunt tasks
   ////////////////////////////////////////////////////
 
   grunt.registerTask('test', [
-    'mochaTest'
+    'karma'
   ]);
 
   grunt.registerTask('isThisGuySafe', [
