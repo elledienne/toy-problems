@@ -80,7 +80,7 @@ module.exports = function(grunt) {
   grunt.registerTask('isThisGuySafe', [
     'jshint',
     'jscs',
-    'mochaTest'
+    'karma'
   ]);
 
 
