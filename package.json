@@ -17,7 +17,7 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "grunt isThisGuySafe"
   },
   "repository": {
     "type": "git",
