@@ -69,5 +69,11 @@ module.exports = function(grunt) {
     'mochaTest'
   ]);
 
+  grunt.registerTask('isThisGuySafe', [
+    'jshint',
+    'jscs',
+    'mochaTest'
+  ]);
+
 
 };
