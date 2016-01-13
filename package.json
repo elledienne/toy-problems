@@ -1,0 +1,32 @@
+{
+  "name": "cracking-the-coding-interview-toyproblems",
+  "version": "1.0.0",
+  "description": "Solutions to the interview questions of the book \"Cracking the coding interview\"",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^3.4.1",
+    "sinon": "^1.17.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs": "^2.6.0",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elledienne/toy-problems.git"
+  },
+  "author": "Lorenzo De Nobili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elledienne/toy-problems/issues"
+  },
+  "homepage": "https://github.com/elledienne/toy-problems#readme"
+}
