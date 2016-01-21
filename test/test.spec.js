@@ -69,3 +69,73 @@ describe('Test for: stringCompression', function () {
     expect(stringCompression('aaaAAbBBBBzzzzzzZ')).to.be.equal('a3A2b1B4z6Z1')
   })
 });
+
+describe('Test for: zeroMatrix', function () {
+
+  it('Should return the same matrix if no 0 are found', function () {
+    var myMatrix = [
+      [1, 3, 5, 4],
+      [3, 8, 6, 9],
+      [2, 8, 5, 8]
+    ];
+    expect(myMatrix).to.eql(zeroMatrix(myMatrix));
+  });
+
+  it('Should return a different matrix if 0 are found', function () {
+    var myMatrix = [
+      [1, 3, 5, 4],
+      [3, 0, 6, 9],
+      [2, 8, 5, 8]
+    ];
+    var copyMatrix = myMatrix.map(function (itm) { return itm; });
+
+    expect(copyMatrix).to.not.eql(zeroMatrix(myMatrix));
+  });
+
+  it('Should have 10 zeroes starting with 2', function () {
+    var myMatrix = [
+      [1, 3, 5, 4],
+      [3, 0, 6, 9],
+      [2, 8, 5, 0]
+    ];
+    
+    zeroMatrix(myMatrix);
+
+    var zeroCount = myMatrix.reduce(function (count, nextRow) {
+      return nextRow.reduce(function (c, next) {
+        if (next === 0) {
+          c++;
+        }
+        return c;
+      }, count);
+    }, 0);
+
+    expect(zeroCount).to.equal(10);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
