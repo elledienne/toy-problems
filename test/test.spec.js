@@ -112,9 +112,66 @@ describe('Test for: zeroMatrix', function () {
 
     expect(zeroCount).to.equal(10);
   });
+
 });
 
+describe('Test for: stringRotation', function () {
+  it('Should add method to the String object', function () {
+    expect( typeof String.prototype.isSubstring ).to.equal('function');
+  });
 
+  it('Should return true on rotated strings', function () {
+    var result = isRotation('waterbottle', 'erbottlewat');
+    expect(result).to.be.true;
+  })
+});
+
+describe('Test for: removeDups', function () {
+
+  var list;
+
+  beforeEach(function() {
+    list = new List();
+
+    list.addNode(1);
+    list.addNode(1);
+    list.addNode(1);
+    list.addNode(2);
+    list.addNode(2);
+    list.addNode(3);
+    list.addNode(1);
+    list.addNode(1);
+    list.addNode(1);
+    list.addNode(2);
+  });
+
+  it('The linked list size should be smaller after removeDup', function () {
+    var originalSize = list.getSize();
+    list.removeDups();
+    var noDupSize = list.getSize();
+
+    expect(originalSize > noDupSize).to.be.true;
+  });
+
+  it('The linked list should not contain duplicates', function () {
+    list.removeDups();
+
+    var counter = {};
+    var curr = list.head;
+
+    while (curr) {
+      if (counter[curr.value]) {
+        curr = false;
+      } else {
+        counter[curr.value] = true;
+        curr = curr.next;
+      }
+    }
+
+    expect(curr).to.be.null;
+  });
+  
+});
 
 
 
